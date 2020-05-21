@@ -1,0 +1,21 @@
+apiVersion: operator.openshift.io/v1alpha1
+kind: ImageContentSourcePolicy
+metadata:
+  name: olm-image-content-source
+spec:
+  repositoryDigestMirrors:
+  - mirrors:
+    - bastion.ocp50.example.com:5000/openshift4
+    source: registry.redhat.io/openshift4
+  - mirrors:
+    - bastion.ocp50.example.com:5000/codeready-workspaces
+    source: registry.redhat.io/codeready-workspaces
+  - mirrors:
+    - bastion.ocp50.example.com:5000/ubi8-minimal
+    source: registry.access.redhat.com/ubi8-minimal
+  - mirrors:
+    - bastion.ocp50.example.com:5000/rhscl
+    source: registry.redhat.io/rhscl
+  - mirrors:
+    - bastion.ocp50.example.com:5000/redhat-sso-7
+    source: registry.redhat.io/redhat-sso-7
